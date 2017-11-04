@@ -1,0 +1,67 @@
+<!doctype html>
+<html ng-app="owstats">
+
+<head>
+	<link href="/css/main.css" rel="stylesheet">
+	<link href="/css/angular-video-background.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+	<script src="/js/angular-video-background.min.js"></script>
+	<script src="/js/chart.min.js"></script>
+	<script src="/js/angular-chart.min.js"></script>
+	<script src="/js/app.js"></script>
+</head>
+
+<body>
+	<div id="main" ng-controller="mainController" back-img={{backgroundImage}} >
+		<div class="profile">
+			<div class="profile-picture" back-img="{{stats[GAMEMODE].overall_stats.avatar}}" style="background-size: cover;"></div>
+			<div class="profile-tag">
+				<div class="profile-portrait" ng-click="viewVideo()">
+					<img ng-src='{{stats[GAMEMODE].overall_stats.rank_image}}'>
+					<span class="profile-portrait-level">{{stats[GAMEMODE].overall_stats.level}}</span>
+				</div>
+				<h2>{{gamertag}}</h2>
+				<h3><span class="key">Tier:</span> {{stats[GAMEMODE].overall_stats.tier}} <img id="tier" src="/images/ranks/{{stats[GAMEMODE].overall_stats.tier}}"></h3>
+				<h3><span class="key">Win Rate:</span> {{stats[GAMEMODE].overall_stats.win_rate}}% </h3>
+				<h3><span class="key">Prestige:</span> {{stats[GAMEMODE].overall_stats.prestige}}</h3>
+				
+			</div>
+			<div class="profile-button-bar">
+				<ul>
+					<li><a ng-click="changeMode('competitive')" ng-class="GAMEMODE=='competitive' ? 'active' : ''">Competitive</a></li>
+					<li><a ng-click="changeMode('quickplay')" ng-class="GAMEMODE=='quickplay' ? 'active' : ''">Quick Play</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="stat-pane" >
+			<div class="stat-pane-overlay"></div>
+
+			<div class="stat-pane-slide" ng-init="pullGameClips()">
+<!--				<video-background source="backgroundClip" volume="0" on-firstend="changeClip()" autoplay></video-background>-->
+				<video id="video" class="video-background" playback-rate=".1" ng-class="blur" src="{{backgroundClip.mp4 | trustUrl}}" muted autoplay on-video-end="changClip"></video>
+<!--
+				<video  height="200px" autoplay controls >
+					<source ng-src="{{highlightVideo}}" type="video/mp4">
+					<source ng-src="{{highlightVideo}}" type="video/ogg">
+					<source ng-src="{{highlightVideo}}" type="video/webm">
+				</video>
+-->
+			</div>
+			<div class="stat-pane-slide" ng-if="blur">
+				<div class="stat-pane-card title" ng-click="changeStatSummary()">
+					<h1>{{current_stat_summary}}</h1>
+					
+				</div>
+				<div class="stat-pane-card" ng-if="key !== 'title'" ng-repeat="(key, stat) in displayStatistics[GAMEMODE][stat_summaries[stat_summary_index]]">
+					<h2>{{stat.title}}</h2>
+					<h1>{{stat.stat}} <span ng-if="stat.suffix">{{stat.suffix}}</span></h1>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+</body>
+
+</html>
