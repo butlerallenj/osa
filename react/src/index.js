@@ -112,7 +112,7 @@ class Body extends React.Component {
 		}
 	}
 	getStats = (e) => {
-		fetch("/overwatch/" + config.platform + "/" + config.gamertag, this.getStats())
+		fetch("/overwatch/" + config.platform + "/" + config.gamertag)
 			.then((r) => r.json()
 				.then((data) => { 
 					const stats = data;
