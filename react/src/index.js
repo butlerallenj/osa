@@ -71,7 +71,7 @@ class Profile extends React.Component {
 						</span>
 					</div>
 					<h2>{config.gamertag}</h2>
-					<h3><span className="key">Tier:</span> {this.props.stats.tier} <img id="tier" src={"//localhost/images/ranks/" + this.props.stats.tier} /></h3>
+					<h3><span className="key">Tier:</span> {this.props.stats.tier} <img id="tier" src={"/images/ranks/" + this.props.stats.tier} /></h3>
 					<h3><span className="key">Wins/Losses:</span> {this.props.stats.wins}/{this.props.stats.losses}</h3>
 					<h3><span className="key">Prestige:</span> {this.props.stats.prestige}</h3>
 				</div>
@@ -112,7 +112,7 @@ class Body extends React.Component {
 		}
 	}
 	getStats = (e) => {
-		fetch("//localhost/overwatch/" + config.platform + "/" + config.gamertag)
+		fetch("/overwatch/" + config.platform + "/" + config.gamertag, this.getStats())
 			.then((r) => r.json()
 				.then((data) => { 
 					const stats = data;
@@ -122,7 +122,7 @@ class Body extends React.Component {
 	}
 	
 	getVideos = (e) => {
-		fetch("//localhost/video/" + config.gamertag)
+		fetch("/video/" + config.gamertag)
 		.then((r) => r.json()
 			.then((data) => { 
 				const videos = data;
