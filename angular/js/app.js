@@ -10,7 +10,7 @@ function randomInt(min,max) {
 }
 
 app.controller('mainController', function ($scope, $http) {
-	$scope.gamertag = 'AnthraxRainbow';
+	$scope.gamertag = '';
 	$scope.tier_data_img_src = {
 		bronze: "rank-1.png",
 		silver: "rank-2.png",

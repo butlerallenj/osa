@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 
 
 var config = {
-	gamertag: 'AnthraxRainbow',
+	gamertag: '',
 	platform: 'xbl',
 	gamemode: 'competitive',
 	summary: 'game_stats',
+	api: "//localhost"
 };
 
 class Stat extends React.Component {
@@ -71,7 +72,7 @@ class Profile extends React.Component {
 						</span>
 					</div>
 					<h2>{config.gamertag}</h2>
-					<h3><span className="key">Tier:</span> {this.props.stats.tier} <img id="tier" src={"/images/ranks/" + this.props.stats.tier} /></h3>
+					<h3><span className="key">Tier:</span> {this.props.stats.tier} <img id="tier" src={config.api+"/images/ranks/" + this.props.stats.tier} /></h3>
 					<h3><span className="key">Wins/Losses:</span> {this.props.stats.wins}/{this.props.stats.losses}</h3>
 					<h3><span className="key">Prestige:</span> {this.props.stats.prestige}</h3>
 				</div>
@@ -102,6 +103,7 @@ class Body extends React.Component {
 		
 		this.state = {
 			stats: [],
+			loading: true,
 			videoIndex: 0,
 			videoClass: "blur",
 			gamemode: [
@@ -112,17 +114,21 @@ class Body extends React.Component {
 		}
 	}
 	getStats = (e) => {
-		fetch("/overwatch/" + config.platform + "/" + config.gamertag)
-			.then((r) => r.json()
-				.then((data) => { 
-					const stats = data;
-					this.setState({stats});
-				})
-			); 
+		fetch(config.api+"/overwatch/" + config.platform + "/" + config.gamertag)
+			.then((r) => {
+				if(r.ok) {
+					r.json().then((data) => { 
+						const stats = data;
+						this.setState({stats, loading: false});
+					})
+				} else {
+					this.getStats();
+				}
+			}); 
 	}
 	
 	getVideos = (e) => {
-		fetch("/video/" + config.gamertag)
+		fetch(config.api+"/video/" + config.gamertag)
 		.then((r) => r.json()
 			.then((data) => { 
 				const videos = data;
@@ -212,26 +218,34 @@ class Body extends React.Component {
 			var StatCards = "";
 		}
 		
-		return (
-			<div id="main">
-				<Profile 
-					changeGamemode={this.changeGamemode} 
-					index={this.state.gamemodeIndex}
-					videoToggle={this.toggleVideoBlur} 
-					stats={this.state.stats.all.stats[
-						this.state.gamemode[
-							this.state.gamemodeIndex
-						]
-					].overall_stats} />
-				<div className="stat-pane">
-					<div className="stat-pane-overlay"></div>
-					<div className="stat-pane-slide">
-						<Video className={this.state.videoClass} src={this.state.videos[this.state.videoIndex]} onEnded={this.changeBackgroundVideo} />
+		if(!this.state.loading) {
+			var APP = (
+				<div id="main">
+					<Profile 
+						changeGamemode={this.changeGamemode} 
+						index={this.state.gamemodeIndex}
+						videoToggle={this.toggleVideoBlur} 
+						stats={this.state.stats.all.stats[
+							this.state.gamemode[
+								this.state.gamemodeIndex
+							]
+						].overall_stats} />
+					<div className="stat-pane">
+						<div className="stat-pane-overlay"></div>
+						<div className="stat-pane-slide">
+							<Video className={this.state.videoClass} src={this.state.videos[this.state.videoIndex]} onEnded={this.changeBackgroundVideo} />
+						</div>
+						{StatCards}
 					</div>
-					{StatCards}
 				</div>
-			</div>
-		);
+			)
+		} else {
+			var APP = (
+				<img src={config.api+"/images/loading.jpg"} className="loading" alt="LOADING" />
+			)
+		}
+		
+		return APP;
 	}
 }
 

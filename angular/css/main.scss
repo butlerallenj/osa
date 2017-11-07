@@ -9,7 +9,7 @@
 }
 @font-face {
 	font-family: "FuturaNo2D";
-	src: url(/fonts/FuturaNo2D.woff)
+	src: url(/fonts/FuturaNo2D.woff);
 }
 $width: 482px;
 $height: 319px;
@@ -21,6 +21,11 @@ $orange: #F7931E;
 $yellow: #FFC70E;
 $blue: #02C0DB;
 $gray: #B2B0B0;
+
+.blur-text {
+	color: transparent;
+	text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
 
 html, body {
 	margin: 0;
@@ -34,7 +39,7 @@ html, body {
 	color: inherit;
 }
 * {
-	cursor: none;
+//	cursor: none;
 	overflow: hidden;
 }
 #main {

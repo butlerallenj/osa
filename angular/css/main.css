@@ -12,6 +12,11 @@
   src: url(/fonts/FuturaNo2D.woff); }
 
 /* line 25, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+.blur-text {
+  color: transparent;
+  text-shadow: 0 0 10px white; }
+
+/* line 30, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
 html, body {
   margin: 0;
   padding: 0;
@@ -19,51 +24,50 @@ html, body {
   color: #ffffff;
   background-color: #35405A; }
 
-/* line 32, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+/* line 37, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
 ::selection {
   background-color: transparent;
   color: inherit; }
 
-/* line 36, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+/* line 41, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
 * {
-  cursor: none;
   overflow: hidden; }
 
-/* line 40, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+/* line 45, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
 #main {
   width: 482px;
   height: 319px;
   background-color: #35405A;
   overflow: hidden; }
-  /* line 45, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+  /* line 50, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
   #main .key {
     color: #02C0DB; }
-  /* line 48, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+  /* line 53, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
   #main .profile {
     width: 100%;
     height: 106.33333px;
     background-color: rgba(0, 0, 0, 0.55);
     position: relative; }
-    /* line 53, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+    /* line 58, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
     #main .profile h3 {
       position: relative;
       color: #F7931E; }
-      /* line 56, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+      /* line 61, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
       #main .profile h3 #tier {
         position: absolute;
         top: -2px;
         width: 29px;
         height: 29px; }
-    /* line 64, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+    /* line 69, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
     #main .profile-portrait {
       display: inline-block;
       height: 106.33333px;
       position: relative;
       float: right; }
-      /* line 69, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+      /* line 74, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
       #main .profile-portrait img {
         width: 106.33333px; }
-      /* line 72, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+      /* line 77, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
       #main .profile-portrait-level {
         position: absolute;
         top: 50%;
@@ -72,36 +76,36 @@ html, body {
         padding: 5px;
         font-size: 1.2em;
         font-family: "FuturaNo2D"; }
-    /* line 82, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+    /* line 87, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
     #main .profile-picture {
       background-color: #35405A;
       width: 106.33333px;
       height: 106.33333px;
       display: inline-block; }
-    /* line 88, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+    /* line 93, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
     #main .profile-tag {
       width: 50%;
       height: 106.33333px;
       vertical-align: top;
       display: inline-block; }
-      /* line 93, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+      /* line 98, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
       #main .profile-tag > * {
         margin: 0;
         padding: 2px; }
-    /* line 98, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+    /* line 103, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
     #main .profile-button-bar {
       float: right; }
-      /* line 100, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+      /* line 105, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
       #main .profile-button-bar ul {
         list-style: none;
         margin: 0;
         padding: 0; }
-        /* line 105, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+        /* line 110, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
         #main .profile-button-bar ul li {
           list-style: none;
           padding: 0;
           margin: 0; }
-          /* line 110, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+          /* line 115, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
           #main .profile-button-bar ul li a {
             cursor: none;
             background-color: transparent;
@@ -112,26 +116,26 @@ html, body {
             font-family: "Overwatch";
             font-size: 1.2em;
             display: block; }
-            /* line 120, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+            /* line 125, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
             #main .profile-button-bar ul li a:focus, #main .profile-button-bar ul li a:active, #main .profile-button-bar ul li a:hover {
               border: none;
               box-shadow: none;
               cursor: none; }
-            /* line 126, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+            /* line 131, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
             #main .profile-button-bar ul li a.active {
               color: #02C0DB; }
-  /* line 134, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+  /* line 139, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
   #main .stat {
     height: 106.33333px;
     border-bottom: 1px solid #000; }
-    /* line 139, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+    /* line 144, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
     #main .stat-picture {
       width: 106.33333px;
       height: 106.33333px;
       position: relative;
       display: inline-block;
       vertical-align: middle; }
-      /* line 144, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+      /* line 149, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
       #main .stat-picture .test {
         top: 50%;
         left: 50%;
@@ -140,23 +144,23 @@ html, body {
         width: 63.8px;
         height: 63.8px;
         background-color: #000; }
-    /* line 155, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+    /* line 160, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
     #main .stat-description {
       display: inline-block;
       position: relative;
       vertical-align: middle;
       height: 106.33333px;
       width: 360.66667px; }
-      /* line 161, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+      /* line 166, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
       #main .stat-description > * {
         margin: 0;
         padding: 0; }
-  /* line 167, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+  /* line 172, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
   #main .stat-pane {
     height: 212.66667px;
     width: 100%;
     position: relative; }
-    /* line 171, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+    /* line 176, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
     #main .stat-pane video {
       position: absolute;
       right: 0;
@@ -168,13 +172,13 @@ html, body {
       z-index: 10;
       background-size: cover;
       overflow: hidden; }
-      /* line 182, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+      /* line 187, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
       #main .stat-pane video.blur {
         filter: blur(15px); }
-    /* line 187, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+    /* line 192, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
     #main .stat-pane-slide {
       z-index: 9999; }
-    /* line 191, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+    /* line 196, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
     #main .stat-pane-card {
       padding: 0px;
       margin: 0 -2px;
@@ -185,7 +189,7 @@ html, body {
       display: inline-block;
       text-align: center;
       vertical-align: center; }
-      /* line 202, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+      /* line 207, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
       #main .stat-pane-card.title h1 {
         position: absolute;
         transform: translateY(-50%);
@@ -193,26 +197,26 @@ html, body {
         color: #ffffff;
         margin: 0;
         padding: 10px; }
-      /* line 211, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+      /* line 216, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
       #main .stat-pane-card h2, #main .stat-pane-card h1 {
         vertical-align: center;
         text-align: center;
         margin: 0;
         padding: 10px 5px; }
-        /* line 216, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+        /* line 221, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
         #main .stat-pane-card h2 span, #main .stat-pane-card h1 span {
           line-height: 125%;
           font-kerning: auto;
           vertical-align: top;
           font-size: .7em; }
-      /* line 223, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+      /* line 228, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
       #main .stat-pane-card h2 {
         color: #02C0DB;
         font-size: 1.2em; }
-      /* line 227, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+      /* line 232, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
       #main .stat-pane-card h1 {
         color: #F7931E; }
-  /* line 232, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+  /* line 237, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
   #main .stat-pane-overlay {
     background-color: rgba(0, 0, 0, 0.1);
     height: 212.66667px;
@@ -220,7 +224,7 @@ html, body {
     position: absolute;
     top: 0;
     z-index: 999; }
-  /* line 240, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
+  /* line 245, /Users/butlerallenj/OneDrive/Websites/overwatch-stats-app/angular/css/main.scss */
   #main .stat-graph {
     width: 150.66667px;
     height: 150.66667px;
