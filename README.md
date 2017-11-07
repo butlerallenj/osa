@@ -3,7 +3,7 @@
 Now, like never before, you too can enjoy a quick statistical glimpse of your current status in everyones' favorite game. OSA (Overwats Stats App - <i>I know pretty clever eh?</i>) is an HTML based web application written in ReactJS. It has a python backend for routing and other features, like gameclip scraping. It uses the wonderful [OWAPI by SunDwarf](https://github.com/SunDwarf/OWAPI/blob/master/api.md), much luv SunDwarf, please consider donating to keep his API server alive [here](https://www.patreon.com/sundwarf)!
 
 ### Disclaimer
-> This is a work in progress and isn't perfectly modularized. This was built for explicitly for the Xbox and isn't currently modularized with an specific configuration files. I will extrapulate in the future, but because this was a gift for a friend, I took the easy way out...
+> This is a work in progress and isn't perfectly modularized. This was built for explicitly for the Xbox and isn't currently modularized with any specific configuration files. I will fix in the future, but because this was a gift for a friend, I took the easy way out...
 
 ## Preview
 ### Competitive Statistics
@@ -43,7 +43,7 @@ var config = {
 #### CONFIG NOTE
 The `api` configuration option is used to change the base URI for communication with the python router. If you are running the front-end using NPM with create-react-app, you will have to change this key to something like `//localhost` so that the XHR requests will route properly to the backend. 
 
-**You must change the `api` to "" before you compile the application with NPM if you want to run in production (i.e with Apache)**
+**You must change the `api` to `""` before you compile the application with NPM if you want to run in production (i.e with Apache)**
 
 ### STYLES
 If you wish to change the colors, or any other styles you will have to edit the CSS file in `osa/angular/css/main.scss`.
